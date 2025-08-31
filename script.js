@@ -1,7 +1,7 @@
-// Cleaned and modularized JavaScript
+// Code JavaScript nettoyé et modulable
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Only one card active at a time across all sections
+    // Une seule carte active à la fois dans toutes les sections
     document.querySelectorAll('.design-card').forEach(card => {
         card.addEventListener('click', function () {
             document.querySelectorAll('.design-card').forEach(c => c.classList.remove('active'));
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Mobile menu toggle
+    // Bouton de bascule du menu mobile
     const menuToggle = document.getElementById('menu-toggle');
     const navbarMenuContainer = document.querySelector('.navbar-menu-container');
     const socialMediaContainer = document.querySelector('.social-media-container');
@@ -20,18 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Scroll spy for active nav link
+    // Détection de la section visible pour activer le lien de navigation correspondant
     const navLinks = document.querySelectorAll('.navbar-menu li a');
     const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
 
-    // Improved scroll spy for active nav link
+    // Version améliorée du "scroll spy" pour activer le lien de navigation en fonction de la position
     function improvedSetActiveLink() {
         let closestIndex = 0;
         let minDistance = Infinity;
         sections.forEach((section, i) => {
             if (!section) return;
             const rect = section.getBoundingClientRect();
-            const distance = Math.abs(rect.top - 80); // 80px offset for header
+            const distance = Math.abs(rect.top - 80); // Décalage de 80px pour l'en-tête
             if (rect.top <= 100 && distance < minDistance) {
                 minDistance = distance;
                 closestIndex = i;
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     window.addEventListener('scroll', improvedSetActiveLink);
-    improvedSetActiveLink(); // Initial call
-    // Also update on click for instant feedback
+    improvedSetActiveLink(); // Appel initial
+    // Mise à jour aussi au clic pour un retour visuel immédiat
     navLinks.forEach((link, i) => {
         link.addEventListener('click', function() {
             navLinks.forEach(l => l.classList.remove('active'));
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Greeting animation
+    // Animation du message de bienvenue
     if (window.anime) {
         const greetingText = document.getElementById('greetingText');
         const greetings = [
