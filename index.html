@@ -497,30 +497,28 @@
  
     <section id="footer" style="background-color: #2d2e3273">
         <div class="footer-left">
-            <form name="contactus" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                <input type="hidden" name="form-name" value="contactus">
-                <p style="display:none">
-                <label>Ne pas remplir : <input name="bot-field"></label>
-                </p>
+                <form action="https://formspree.io/f/mzzjkbae" method="POST">
+                    <h2 class="techy-title">Créons quelque chose d'extraordinaire ensemble</h2>
 
-                <h2 class="techy-title">Créons quelque chose d'extraordinaire ensemble</h2>
+                    <div class="email-form">
+                        <h2 class="creative-title">Commencer par <span>dire bonjour</span></h2>
+                        
+                        <label for="name">Votre nom</label>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                        
+                        <label for="email">Adresse email</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        
+                        <div>
+                            <label for="message" class="message-label">Message</label>
+                            <textarea name="message" id="message" placeholder="Message" required></textarea>
+                            <button type="submit">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
 
-                <div class="email-form">
-                <h2 class="creative-title">Commencer par <span>dire bonjour</span></h2>
-                
-                <label for="name">Votre nom</label>
-                <input type="text" name="name" id="name" placeholder="Your name" required>
-                
-                <label for="email">Adresse email</label>
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
-                
-                <div>
-                    <label for="message" class="message-label">Message</label>
-                    <textarea name="message" id="message" placeholder="Message" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </div>
-                </div>
-            </form>
 
             <div class="footer-title">
                 <h3 class="title-first-name">Diaby</h3>
