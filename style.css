@@ -67,7 +67,7 @@ html {
 #announcement-banner p {
   display: inline-block;
   white-space: nowrap;
-  animation: moveText 10s linear infinite;
+  animation: moveText 18s linear infinite;
 }
 
 @keyframes moveText {
