@@ -1226,16 +1226,3 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-/* Empêche tout débordement horizontal sur les sections principales */
-section, .container, .body-part-1, .body-part-2, .cards-container, .image-container {
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* Corrige les sections qui utilisent width: 100vw */
-section[style*="width: 100vw"], div[style*="width: 100vw"] {
-  width: 100% !important;
-  max-width: 100vw !important;
-  box-sizing: border-box;
-}
